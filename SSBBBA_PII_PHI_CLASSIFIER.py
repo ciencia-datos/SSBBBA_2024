@@ -57,9 +57,9 @@ with tab1:
         st.header("Raw PII/PHI Data Elements.")
         st.write(df)
         st.header("Model Classified PII/PHI Data Elements.")
-        if 'FIELD' in df.columns:
-            df['FIELD'] = df['FIELD'].astype('U')
-            df['predicted_class']=df['FIELD'].apply(lambda x:model_predictor([x]))
+        if 'HEADER_FIELD' in df.columns:
+            df['HEADER_FIELD'] = df['HEADER_FIELD'].astype('U')
+            df['predicted_class']=df['HEADER_FIELD'].apply(lambda x:model_predictor([x]))
             df['predicted_class']= df['predicted_class'].replace({1:'PII/PHI',0:'NO-PII/PHI'})
             st.dataframe(df)
             csv_exp = convert_df(df)
