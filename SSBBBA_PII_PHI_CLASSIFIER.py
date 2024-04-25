@@ -3,7 +3,7 @@ import os
 import pickle
 import random
 
-import matplotlib.pyplot as plt
+
 import pandas as pd
 import requests
 import streamlit as st
