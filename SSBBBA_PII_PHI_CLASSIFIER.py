@@ -71,7 +71,7 @@ with tab1:
             key="download-csv",
             )
         else:
-            st.error('Please Make sure to give a column name as (FIELD) to input column.')
+            st.error('Please Make sure to give a column name as (HEADER_FIELD) to input column.')
         
 with tab2:
     with st.form("Message classification"):
