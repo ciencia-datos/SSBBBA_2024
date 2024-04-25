@@ -58,7 +58,7 @@ with tab1:
         if 'FIELD' in df.columns:
             df['FIELD'] = df['FIELD'].astype('U')
             df['predicted_class']=df['FIELD'].apply(lambda x:model_predictor([x]))
-            df['predicted_class'].replace({1:'PII/PHI',0:'NO-PII/PHI'})
+            df['predicted_class']= df['predicted_class'].replace({1:'PII/PHI',0:'NO-PII/PHI'})
             st.table(df)
             csv_exp = convert_df(df)
             st.download_button(
