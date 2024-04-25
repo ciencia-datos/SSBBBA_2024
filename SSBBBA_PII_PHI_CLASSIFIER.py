@@ -51,7 +51,7 @@ def convert_df(df):
 tab1, tab2 = st.tabs(["Bulk", "Single"])
 
 with tab1:
-    uploaded_file = st.file_uploader("Upload a file with header text to be classified.Input field name should be 'FIELD' ")
+    uploaded_file = st.file_uploader("Upload a file with header text to be classified.Input field name should be 'HEADER_FIELD' ")
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         st.header("Raw PII/PHI Data Elements.")
