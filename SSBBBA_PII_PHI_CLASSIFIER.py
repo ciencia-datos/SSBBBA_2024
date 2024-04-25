@@ -40,7 +40,9 @@ def model_predictor(text):
 	txt_class = int(XGB_model_classifier.predict(txt_vec)[0])
 	return txt_class
 
-st.title("SixSigma-PII/PHI Classification!")
+st.title("SixSigma-PII/PHI Classification!!")
+st.subheader("Indian Statistical Institute-Hyderabad.")
+st.subheader("Mallesham Yamulla")
 
 @st.cache_data
 def convert_df(df):
